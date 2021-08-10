@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://app.gls-us.com/Tracking/TrackShipment -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+    <title ng-bind="title">Track Shipment Result Details</title>
+    <link rel="shortcut icon" href="https://app.gls-us.com/favicon4.ico" type="image/icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./mpp la_files/css" rel="stylesheet">
+
+    <link href="./mpp la_files/site.css" rel="stylesheet">
+
+    
+    <script async="" src="./mpp la_files/analytics.js.download"></script><script src="./mpp la_files/modernizr"></script>
+
+    <script src="./mpp la_files/jquery"></script>
+
+    <link href="./mpp la_files/ng-grid.css" rel="stylesheet" type="text/css">
+    
+    <script src="./mpp la_files/ganalytics.js.download" type="text/javascript"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.numbers-only').bind('keypress', function (event) {
+        var key = event.keyCode ? event.keyCode : event.which;
+        if (key == 8 ||
+                key == 46 ||
+                key == 9 ||
+                key == 10 ||
+                key == 13) {
+          return true;
+        }
+        else if (key < 48 || key > 57) {
+          return false;
+        }
+        else {
+          return true;
+        }
+      });
+    });
+
+
+    GetCurrentUrlParameterByName = function (qsName) {
+        var url = window.location.href;
+        qsName = qsName.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + qsName + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+  </script>
+<link href="./mpp la_files/esw.min.css" type="text/css" rel="stylesheet"><style id="inert-style">
+[inert] {
+	pointer-events: none;
+	cursor: default;
+}
+
+[inert], [inert] * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+</style></head>
+
+<body ng-app="trackShipmentModule" ng-controller="trackShipmentController" style="" class="ng-scope">
+    <div class="page" style="position:relative">
+
+
+
+
+
+
+    <style type="text/css">
+              .embeddedServiceHelpButton .helpButton .uiButton {
+                              background-color: #172154;
+                              font-family: "Salesforce Sans", sans-serif;
+               }
+               .embeddedServiceHelpButton .helpButton .uiButton:focus {
+                              outline: 1px solid #172154;
+               }
+               font-face {
+                              font-family: 'Salesforce Sans';
+                              src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+                              url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+               }
+    </style>
+    <script type="text/javascript" src="./mpp la_files/esw.min.js.download"></script>
+    <script type="text/javascript">
+        var initESW = function (gslbBaseURL) {
+            embedded_svc.settings.displayHelpButton = true; //Or false
+            embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+            //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+            //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+            //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+            //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+            // Settings for Chat
+
+            embedded_svc.settings.directToButtonRouting = function (prechatFormData) {
+
+                if (prechatFormData[6].value === "Track my package")
+                    return "5733t000000blJJ";
+
+                if (prechatFormData[6].value === "Missing package")
+                    return "5733t000000blJJ";
+
+                if (prechatFormData[6].value === "Schedule a pickup")
+                    return "5733t000000blJJ";
+
+                if (prechatFormData[6].value === "Hold my package for pickup")
+                    return "5733t000000blJJ";
+
+                if (prechatFormData[6].value === "Add delivery instructions or gate code")
+                    return "5733t000000blJJ";
+
+                if (prechatFormData[6].value === "Service Feedback")
+                    return "5733t000000blJJ";
+
+                if (prechatFormData[6].value === "Other question")
+                    return "5733t000000blJJ";
+
+                if (prechatFormData[6].value === "Start or stop scheduled service")
+                    return "5733t000000Y0Io";
+
+                if (prechatFormData[6].value === "Add or change address")
+                    return "5733t000000Y0Io";
+
+                if (prechatFormData[6].value === "Contact a Sales Representative")
+                    return "5733t000000Y0Io";
+
+                if (prechatFormData[6].value === "Assistance with rate estimate")
+                    return "5733t000000Y0Io";
+
+            }
+
+            //};
+            //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+            //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+            //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+            embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+            embedded_svc.settings.entryFeature = 'LiveAgent';
+
+            embedded_svc.init(
+                           'https://gls-us.my.salesforce.com',
+                           'https://gls-us.secure.force.com/liveAgentSetupFlow',
+                           gslbBaseURL,
+                           '00D500000007Qte',
+                          'CS_Chat_Team',
+                           {
+                               baseLiveAgentContentURL: 'https://c.la1-c1-ia5.salesforceliveagent.com/content',
+                               deploymentId: '5723t000000XZAH',
+                               buttonId: '5733t000000blJJ',
+                               baseLiveAgentURL: 'https://d.la1-c1-ia5.salesforceliveagent.com/chat',
+                               eswLiveAgentDevName: 'CS_Chat_Team',
+                               isOfflineSupportEnabled: false
+                           }
+            );
+        };
+
+        if (!window.embedded_svc) {
+            var s = document.createElement('script');
+            s.setAttribute('src', 'https://gls-us.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.onload = function () {
+                initESW(null);
+            };
+            document.body.appendChild(s);
+        } else {
+            initESW('https://service.force.com');
+        }
+    </script>
+
+
+<header id="header">
+    <div class="left">
+        <br>
+        <a href="https://gls-us.com/"><img src="./mpp la_files/GLS_website-logo-v1.jpg" border="0" align="left" alt="GLS Home"></a>
+    </div>
+
+
+    <div class="toplinks">
+
+        <ul class="right">
+            <li><a href="https://app.gls-us.com/Home/Login">Start Page</a></li>
+            <li><a href="https://app.gls-us.com/Support/CustomerService?Case.Account_Number__c=102809">Contact Us</a></li> 
+            <li><a href="https://glsus.force.com/help/" target="new">Help</a></li> 
+                      
+            
+          
+                <li style="color:black;"><strong>KETAN UPADHYAY</strong>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://app.gls-us.com/Settings/UserProfile">My Profile</a></li>
+                <br><br><br><br>
+                <li style="float:right">
+                    <img src="./mpp la_files/LoggedintoParcel.jpg" border="0" align="left" alt="GSO Home">
+                </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+
+<div class="menu">
+
+  <style>
+    .navItemHolder{
+      /*width:90px; display:block;*/
+    }
+  </style>
+
+  <ul>
+    <li>
+      <a href="https://app.gls-us.com/Home/LogOut" style="margin-right:40px;">Log Out</a>
+    </li>
+  </ul>
+    <ul>
+        <li>
+            <a href="https://app.gls-us.com/Support">Support</a>
+            <ul>
+                <li><a href="https://app.gls-us.com/Support/CustomerService?Case.Account_Number__c=102809"><span>Contact Us</span></a></li>
+                <li><a href="https://app.gls-us.com/Support/Claims"><span> Claims </span></a></li>
+                <li><a href="https://glsus.force.com/help/" target="_blank"><span> Help </span></a></li>
+
+            </ul>
+        </li>
+    </ul>
+  <ul>
+    <li>
+      <a href="https://app.gls-us.com/Settings">Settings</a>
+      <ul>
+        <li><a href="https://app.gls-us.com/Settings/UserProfile"><span>User Profile</span></a></li>
+          <li><a href="https://app.gls-us.com/Tracking/TrackShipment"><span style="font-weight:bold ">Administration</span></a></li>
+          <li><a href="https://app.gls-us.com/Settings/UserAdministration"><span>&nbsp; &nbsp; &nbsp; &nbsp; User </span></a></li>
+          <li><a href="https://app.gls-us.com/Settings/GroupAdministration"><span>&nbsp; &nbsp; &nbsp; &nbsp; Group </span></a></li>
+          <li><a href="https://app.gls-us.com/Settings/AccountAdministration"><span>&nbsp; &nbsp; &nbsp; &nbsp; Account </span></a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+        <a href="https://app.gls-us.com/Tools">Tools</a>
+        <ul>
+          <li><a href="https://app.gls-us.com/Tools/ManageAddressBook"><span>Address Book</span></a></li>
+          <li><a href="https://app.gls-us.com/Tools/FuelSurcharge"><span>Fuel Surcharges</span></a></li>
+          <li><a href="https://app.gls-us.com/Home/DropboxLocator"><span>Drop Box Locator</span></a></li>
+        </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+        <a href="https://app.gls-us.com/Invoicing/">Billing</a>
+        <ul>
+            <li><a href="https://app.gls-us.com/Invoicing/BillingProfile"><span>Billing Profile</span></a></li>
+          <li>
+            <a href="https://app.gls-us.com/Invoicing/Summary">
+                <span>View Invoices</span>
+            </a>
+
+          </li>
+        </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+        <a href="https://app.gls-us.com/Reporting">Reporting</a>
+        <ul>
+          <li><a href="https://app.gls-us.com/Reporting/ShippingHistory"><span>Shipping History</span></a></li>
+          <li><a href="https://app.gls-us.com/Reporting/TodaysManifest"><span>Today's Manifest</span></a></li>
+        </ul>
+    </li>
+  </ul>
+  <ul>
+
+    <li>
+      <a href="https://app.gls-us.com/Tracking/TrackShipment"><span>Tracking</span></a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+        <a href="https://app.gls-us.com/Shipping">Shipping</a>
+        <ul>
+            <li><a href="https://app.gls-us.com/Shipping/PrepareShipment?mode=New"><span>Prepare Parcel Shipment</span></a></li>
+          <li><a href="https://app.gls-us.com/Shipping/EditShipment"><span>Edit Shipment</span></a></li>
+          <li><a href="https://app.gls-us.com/Shipping/PickupSchedule"><span>Schedule Pickup</span></a></li>
+          <li><a href="https://app.gls-us.com/Shipping/RatesCalculator"><span>Calculate Rates &amp; Times</span></a></li>
+          <li><a href="https://app.gls-us.com/Shipping/OrderSupplies"><span>Order Supplies</span></a></li>
+        </ul>
+    </li>
+  </ul>
+
+</div> 
+
+<hr style="display:none">
+
+
+
+</header>
+
+        <div id="main" style="width: 960px;">
+                <div class="form-horizontal">
+                    <div class="form-group">
+
+                        <div class="col-md-11">
+                            <h2><span id="ViewBagTitle">Shipment Tracking Information</span></h2>
+                        </div>
+
+                    </div>
+                    <!-- ngIf: isHelpSectionOpen -->
+                </div>
+            
+
+
+<div>
+    
+
+    <input type="hidden" name="ViewBagTrackCriteria" id="ViewBagTrackCriteria" ng-model="TrackShipment.TrackShipmentSearchForm.TrackCriteria" value="TrackCriteriaTrackNumber" ng-init="TrackShipment.TrackShipmentSearchForm.TrackCriteria=&#39;TrackCriteriaTrackNumber&#39;" class="ng-pristine ng-valid">
+
+    <input type="hidden" name="ViewBagTrackNumberList" id="ViewBagTrackNumberList" ng-model="TrackShipment.TrackShipmentSearchForm.TrackCriteriaTrackNumbers" ng-init="TrackShipment.TrackShipmentSearchForm.TrackCriteriaTrackNumbers=&#39;&#39;" class="ng-pristine ng-valid">
+    <input type="hidden" name="ViewBagCalledFrom" id="ViewBagCalledFrom">
+
+    <!-- ngIf: TrackShipment.ShowSearchResultDetail --><div class="form-horizontal ng-scope" ng-if="TrackShipment.ShowSearchResultDetail">
+<div class="form-group">
+    <div class="col-md-11">&nbsp;</div>
+    <div class="col-md-1" align="right">
+        <img src="./mpp la_files/icon_printer.gif" ng-click="TrackShipmentSearchResultDetailPrint();">
+    </div>
+</div>
+
+<div class="form-horizontal " id="printarea">
+    <fieldset>
+        <section>
+            <div class="form-group">
+                <div class="col-md-12p">
+                    <label><b>Tracking Number:</b></label>
+                </div>
+                <div class="col-md-38p">
+                    <label class="ng-binding">&nbsp;553196969&nbsp;</label>
+                </div>
+                
+            </div>
+        </section>
+
+        <br>
+        <section>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <h5><u>Shipped From</u></h5>
+                </div>
+                <div class="col-md-6">
+                    <h5><u>Shipped To</u></h5>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12p">
+                    <label><b>Company:</b></label>
+                </div>
+                <div class="col-md-38p">
+                    <label class="ng-binding">MOVING SUPPLIES BAY AREA&nbsp;</label>
+                </div>
+                <div class="col-md-12p">
+                    <label><b>Company:</b></label>
+                </div>
+                <div class="col-md-38p">
+                    <label class="ng-binding">MMP LA&nbsp;</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12p">
+                    <label><b>Address:</b></label>
+                </div>
+                <div class="col-md-38p">
+                    <label class="ng-binding">
+                        4135 PESTANA PLACE<!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.PickupAddress.Address2!='' -->&nbsp; <br>
+                        FREMONT<!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.PickupAddress.State!='' --><span ng-if="TrackShipment.TrackShipmentSearchResultDetail.PickupAddress.State!=&#39;&#39;" class="ng-scope ng-binding">, CA</span><!-- end ngIf: TrackShipment.TrackShipmentSearchResultDetail.PickupAddress.State!='' --> 94538&nbsp;
+                    </label>
+                </div>
+                <div class="col-md-12p">
+                    <label><b>Address:</b></label>
+                </div>
+                <div class="col-md-38p">
+                    <label class="ng-binding">
+                        3201 W. Mission Road<!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.DeliveryAddress.Address2!='' -->&nbsp; <br>
+                        ALHAMBRA<!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.DeliveryAddress.State!='' --><span ng-if="TrackShipment.TrackShipmentSearchResultDetail.DeliveryAddress.State!=&#39;&#39;" class="ng-scope ng-binding">, CA</span><!-- end ngIf: TrackShipment.TrackShipmentSearchResultDetail.DeliveryAddress.State!='' --> 91803&nbsp;
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12p">
+                    <label><b>Sent By:</b></label>
+                </div>
+                <div class="col-md-38p">
+                    <label class="ng-binding">KETAN UPADHYAY&nbsp;</label>
+                </div>
+                <div class="col-md-12p">
+                    <label><b>Attention:</b></label>
+                </div>
+                <div class="col-md-38p">
+                    <label class="ng-binding">EDGAR RODRIGUEZ&nbsp;&nbsp;</label>
+                </div>
+            </div>
+        </section>
+        <br>
+
+        <section>
+            <div class="form-group">
+                <h5><u>Shipment Details</u></h5>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-3">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <label><b>Ship Date:</b></label>
+                            </div>
+                            <div class="col-md-7 ng-binding">
+                               05-04-2021
+                               
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <label><b>Del Date:</b></label>
+                            </div>
+                            <div class="col-md-7 ng-binding">
+                                05-05-2021&nbsp;
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <label><b>Del Time:</b></label>
+                            </div>
+                            <div class="col-md-7">
+                                <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.Status == 'Delivered' ||
+                            TrackShipment.TrackShipmentSearchResultDetail.Status == 'Returned' --><label ng-if="TrackShipment.TrackShipmentSearchResultDetail.Status == &#39;Delivered&#39; ||
+                            TrackShipment.TrackShipmentSearchResultDetail.Status == &#39;Returned&#39;" class="ng-scope ng-binding">2:10 PM&nbsp;</label><!-- end ngIf: TrackShipment.TrackShipmentSearchResultDetail.Status == 'Delivered' ||
+                            TrackShipment.TrackShipmentSearchResultDetail.Status == 'Returned' -->
+                                
+                            </div>                            
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <label><b>Signed By:</b></label>
+                                <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.PODSignatureId!=0 -->
+                                <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.ImageExists --><a ng-click="TrackShipmentSearchResultDetailShowPODImage(TrackShipment.TrackShipmentSearchResultDetail.StopId);" ng-if="TrackShipment.TrackShipmentSearchResultDetail.ImageExists" class="ng-scope"><br>View POD Image</a><!-- end ngIf: TrackShipment.TrackShipmentSearchResultDetail.ImageExists -->
+                            </div>
+                            <div class="col-md-7">
+                                <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.Status == 'Delivered' ||
+                            TrackShipment.TrackShipmentSearchResultDetail.Status == 'Returned' --><label ng-if="TrackShipment.TrackShipmentSearchResultDetail.Status == &#39;Delivered&#39; ||
+                            TrackShipment.TrackShipmentSearchResultDetail.Status == &#39;Returned&#39;" class="ng-scope ng-binding">Front desk&nbsp;</label><!-- end ngIf: TrackShipment.TrackShipmentSearchResultDetail.Status == 'Delivered' ||
+                            TrackShipment.TrackShipmentSearchResultDetail.Status == 'Returned' -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label><b>Service:</b></label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="ng-binding">CPS&nbsp;</label>
+                            </div>                            
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label><b>Weight (lbs):</b></label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="ng-binding">10&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label><b>COD Value:</b></label>
+                            </div>
+                            <div class="col-md-6">
+                                <label style="text-align: right;" class="ng-binding">0&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label><b>Dec. Value:</b></label>
+                            </div>
+                            <div class="col-md-6">
+                                <label style="text-align: right;" class="ng-binding">0&nbsp;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-horizontal">
+                        
+                        <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.DeliveryDate == date && TrackShipment.TrackShipmentSearchResultDetail.Status == 'In Transit' -->
+
+                        <div class="form-group">
+                            <div class="col-md-24p">
+                                <label><b>Reference:</b></label>
+                            </div>
+                            <div class="col-md-76p">
+                                <label class="ng-binding">&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-24p">
+                                <label><b>Signature Type:</b></label>
+                            </div>
+                            <div class="col-md-76p">
+                                <label class="ng-binding">Standard&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label><b>Special Instructions:</b></label>
+                                <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.SpecialInstructions!='' -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        
+        <div class="form-group ng-hide" ng-show="TrackShipment.TrackShipmentSearchResultDetail.ShowPODSignatureImage" id="ShowPODSignatureImageId">
+        </div>
+        <div ng-show="ErrorDownloading" id="ErrorDownload" class="ng-hide">
+            <p style="color:red">An error occurred while downloading the image. Please try again later. </p>
+        </div>
+
+        <section>
+            <div class="form-group">
+                <h5><u>Transit Details</u></h5>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="col-md-3"><label><b>Date/Time</b></label></div>
+                <div class="col-md-3"><label><b>Location</b></label></div>
+                <div class="col-md-6"><label><b>Note</b></label></div>
+            </div>
+           
+                <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.TransitDetails.length == 0 -->
+            
+                <!-- ngIf: TrackShipment.TrackShipmentSearchResultDetail.TransitDetails.length > 0 --><div class="form-group ng-scope" ng-if="TrackShipment.TrackShipmentSearchResultDetail.TransitDetails.length &gt; 0">
+                    <fieldset style="padding: 0; margin: 0;">
+                        <!-- ngRepeat: Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails --><div ng-repeat="Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails" ng-class-odd=" &#39;NgGRidOddRowBg&#39; " ng-class-even=" &#39;NgGRidEvenRowBg&#39; " class="ng-scope NgGRidOddRowBg">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        05-04-2021 6:31 PM &nbsp;
+                                    </div>
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        Hayward, CA &nbsp;
+                                    </div>
+
+                                    <div class="col-md-6" style="background: inherit;">
+                                        <label class="ng-binding">ARRIVAL SCAN - DELIVERY SCHED  FOR 05/05/2021</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end ngRepeat: Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails --><div ng-repeat="Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails" ng-class-odd=" &#39;NgGRidOddRowBg&#39; " ng-class-even=" &#39;NgGRidEvenRowBg&#39; " class="ng-scope NgGRidEvenRowBg">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        05-04-2021 6:31 PM &nbsp;
+                                    </div>
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        Hayward, CA &nbsp;
+                                    </div>
+
+                                    <div class="col-md-6" style="background: inherit;">
+                                        <label class="ng-binding">DIM SCAN - PKG DIM - 65*7*6</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end ngRepeat: Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails --><div ng-repeat="Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails" ng-class-odd=" &#39;NgGRidOddRowBg&#39; " ng-class-even=" &#39;NgGRidEvenRowBg&#39; " class="ng-scope NgGRidOddRowBg">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        05-05-2021 7:36 AM &nbsp;
+                                    </div>
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        SANTA FE SPRINGS, CA &nbsp;
+                                    </div>
+
+                                    <div class="col-md-6" style="background: inherit;">
+                                        <label class="ng-binding">ON ROUTE FOR DELIVERY</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end ngRepeat: Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails --><div ng-repeat="Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails" ng-class-odd=" &#39;NgGRidOddRowBg&#39; " ng-class-even=" &#39;NgGRidEvenRowBg&#39; " class="ng-scope NgGRidEvenRowBg">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        05-05-2021 2:10 PM &nbsp;
+                                    </div>
+                                    <div class="col-md-3 ng-binding" style="background: inherit;">
+                                        SANTA FE SPRINGS, CA &nbsp;
+                                    </div>
+
+                                    <div class="col-md-6" style="background: inherit;">
+                                        <label class="ng-binding">SHIPMENT DELIVERED</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end ngRepeat: Item in TrackShipment.TrackShipmentSearchResultDetail.TransitDetails -->
+                    </fieldset>
+                </div><!-- end ngIf: TrackShipment.TrackShipmentSearchResultDetail.TransitDetails.length > 0 -->
+</section>
+
+        <br>
+        <div class="form-group" id="ShowBackButtonId">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Back" ng-click="TrackingResultDetailsBackButtonClicked()" name="Submit" class="btn btn-default">
+            </div>
+        </div>
+
+    </fieldset>
+    <!-- ngIf: loader==true -->
+
+</div>
+
+    </div><!-- end ngIf: TrackShipment.ShowSearchResultDetail -->
+
+    <!-- ngIf: TrackShipment.ShowSearchResultsSummary && TrackShipment.TrackShipmentSearchResultsSummary.Data.length>0 -->
+    <!-- ngIf: TrackShipment.ShowSearchResultsSummary && TrackShipment.TrackShipmentSearchResultsSummary.Data.length == 0 -->
+    
+    <!-- ngIf: TrackShipment.ShowSearchForm == true && TrackShipment.ShowSearchResultDetail == false && TrackShipment.ShowSearchResultsSummary == false -->
+</div>
+        </div>
+
+        <div class="clear"></div>
+    </div><script type="text/javascript" src="./mpp la_files/common.min.js.download"></script>
+
+<footer class="footer">
+
+    <div class="left">
+        <p>© 1995-2021 General Logistics Systems US, Inc. (“GLS”)</p>
+    </div>
+    <div class="right">
+        <p>
+            </p><ul>
+                <li><a href="https://gls-us.com/home/newslettersignup/" target="_blank" style="color: #0645AD;">Subscribe</a></li>
+                <li><a href="https://gls-us.com/privacypolicy" target="_blank" style="color: #0645AD;">Privacy Policy</a></li>
+                <li><a href="https://gls-us.com/termsofuse" target="_blank" style="color: #0645AD;">Terms of Use</a></li>
+                <li class="last"><a href="https://optout.aboutads.info/" target="new" style="color: #0645AD;">Do Not Sell My Personal Info</a></li>
+
+            </ul>
+        <p></p>
+    </div>
+</footer>
+
+    
+    <script src="./mpp la_files/angular.min.js.download"></script>
+
+    <script src="./mpp la_files/cpangular"></script>
+
+    <script src="./mpp la_files/angularresource"></script>
+
+    <script src="./mpp la_files/angulargrid"></script>
+
+    <script src="./mpp la_files/bootstrap"></script>
+
+    
+    <script src="./mpp la_files/trackshipment.js.download"></script>
+    <script src="./mpp la_files/ui-bootstrap-tpls-0.11.0.js.download"></script>
+    <script src="./mpp la_files/ng-grid-flexible-height.js.download"></script>
+
+
+
+<script type="text/javascript" src="./mpp la_files/liveagent.esw.min.js.download"></script><form id="fileUploadForm" enctype="multipart/form-data" method="post" target="fileUploadIframe"><input type="file" id="fileSelector" name="file" style="display: none;"><input name="filename" type="hidden"></form><iframe id="fileUploadIframe" name="fileUploadIframe" title="FileUploadFrame" style="display: none;" src="./mpp la_files/saved_resource.html"></iframe><iframe id="esw_storage_iframe" src="./mpp la_files/esw.html" title="Live Chat Metadata" style="display: none;"></iframe><script type="text/javascript" src="./mpp la_files/EmbeddedServiceConfig.jsonp"></script><script type="text/javascript" src="./mpp la_files/invite.esw.min.js.download"></script><div class="embeddedServiceHelpButton"><div class="helpButton"><button class="uiButton helpButtonEnabled" href="javascript:void(0)"><span class="embeddedServiceIcon" aria-hidden="true" data-icon="" style="display: inline-block;"></span><span class="helpButtonLabel" id="helpButtonSpan" aria-live="polite" aria-atomic="true"><span class="assistiveText">Live chat:</span><span class="message">Chat with an Expert</span></span></button></div></div><script type="text/javascript" src="./mpp la_files/inert.min.js.download"></script></body></html>
